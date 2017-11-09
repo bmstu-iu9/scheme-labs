@@ -86,7 +86,7 @@
 <em>справа</em>.</small>
 
 <p><b>Арифметические операции</b>
-<table cellspacing=0>
+<table>
 <tr><td style="text-align: left; vertical-align: top;">+        </td><td style="text-align: left; vertical-align: top;">(n2 n1) &#8594; (сумма)             </td><td style="text-align: left; vertical-align: top;">Сумма n1 и n2</td></tr>
 <tr><td style="text-align: left; vertical-align: top;">&minus;  </td><td style="text-align: left; vertical-align: top;">(n2 n1) &#8594; (разность)          </td><td style="text-align: left; vertical-align: top;">Разность: n1 &minus; n2</td></tr>
 <tr><td style="text-align: left; vertical-align: top;">*        </td><td style="text-align: left; vertical-align: top;">(n2 n1) &#8594; (произведение)&nbsp;</td><td style="text-align: left; vertical-align: top;">Произведение n2 на n1</td></tr>
@@ -96,7 +96,7 @@
 </table>
 
 <p><b>Операции сравнения</b>
-<table cellspacing=0>
+<table>
 <tr><td style="text-align: left; vertical-align: top;">=&nbsp;</td><td style="text-align: left; vertical-align: top;">(n2 n1) &#8594; (флаг) &nbsp;</td><td style="text-align: left; vertical-align: top;">Флаг равен &minus;1, если n1 = n2, иначе флаг равен 0</td></tr>
 <tr><td style="text-align: left; vertical-align: top;">&gt;   </td><td style="text-align: left; vertical-align: top;">(n2 n1) &#8594; (флаг) &nbsp;</td><td style="text-align: left; vertical-align: top;">Флаг равен &minus;1, если n1 &gt; n2, иначе флаг равен 0</td></tr>
 <tr><td style="text-align: left; vertical-align: top;">&lt;   </td><td style="text-align: left; vertical-align: top;">(n2 n1) &#8594; (флаг) &nbsp;</td><td style="text-align: left; vertical-align: top;">Флаг равен &minus;1, если n1 &lt; n2, иначе флаг равен 0</td></tr>
@@ -105,7 +105,7 @@
 &minus;1 соответствует значению &laquo;истина&raquo;, 0 &mdash; значению &laquo;ложь&raquo;.
 
 <p><b>Логические операции</b>
-<table cellspacing=0>
+<table>
 <tr><td style="text-align: left; vertical-align: top;">not&nbsp;</td><td style="text-align: left; vertical-align: top;">(n)     &#8594; (результат)&nbsp;</td><td style="text-align: left; vertical-align: top;">НЕ n</td></tr>
 <tr><td style="text-align: left; vertical-align: top;">and&nbsp;</td><td style="text-align: left; vertical-align: top;">(n2 n1) &#8594; (результат)&nbsp;</td><td style="text-align: left; vertical-align: top;">n2 И n1</td></tr>
 <tr><td style="text-align: left; vertical-align: top;">or       </td><td style="text-align: left; vertical-align: top;">(n2 n1) &#8594; (результат)&nbsp;</td><td style="text-align: left; vertical-align: top;">n2 ИЛИ n1</td></tr>
@@ -119,7 +119,7 @@
 <p>При выполнении вычислений на стеке часто возникает необходимость 
 изменять порядок следования элементов, удалять значения,
 копировать их и т.д. Для этого реализуйте следующие операции:
-<table cellspacing=0>
+<table>
 <tr><td style="text-align: left; vertical-align: top;">drop       </td><td style="text-align: left; vertical-align: top;">(n1)       &#8594; () &nbsp;       </td><td style="text-align: left; vertical-align: top;">Удаляет элемент на вершине стека</td></tr>
 <tr><td style="text-align: left; vertical-align: top;">swap       </td><td style="text-align: left; vertical-align: top;">(n2 n1)    &#8594; (n1 n2)         </td><td style="text-align: left; vertical-align: top;">Меняет местами два элемента на вершине стека</td></tr>
 <tr><td style="text-align: left; vertical-align: top;">dup        </td><td style="text-align: left; vertical-align: top;">(n1)       &#8594; (n1 n1)         </td><td style="text-align: left; vertical-align: top;">Дублирует элемент на вершине стека</td></tr>
@@ -129,7 +129,7 @@
 </table>
 
 <p><b>Управляющие конструкции</b>
-<table cellspacing=0>
+<table>
 <tr><td style="text-align: left; vertical-align: top;">define <i>word</i>&nbsp;</td><td style="text-align: left; vertical-align: top;">() &#8594; ()          </td><td style="text-align: left; vertical-align: top;">Начинает словарную статью &mdash; определение слова <i>word</i></td></tr>
 <tr><td style="text-align: left; vertical-align: top;">end                     </td><td style="text-align: left; vertical-align: top;">() &#8594; ()          </td><td style="text-align: left; vertical-align: top;">Завершает статью</td></tr>
 <tr><td style="text-align: left; vertical-align: top;">exit                    </td><td style="text-align: left; vertical-align: top;">() &#8594; ()          </td><td style="text-align: left; vertical-align: top;">Завершает выполнение процедуры (кода статьи)</td></tr>
