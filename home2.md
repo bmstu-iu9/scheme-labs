@@ -53,7 +53,7 @@
 (union '(1 2 3) '(2 3 4))                    ⇒ (4 3 2 1)
 (intersection '(1 2 3) '(2 3 4))             ⇒ (2 3)
 (difference '(1 2 3 4 5) '(2 3))             ⇒ (1 4 5)
-(symmetric-difference '(1 2 3 4) '(3 4 5 6)) ⇒ (1 2 5 6)
+(symmetric-difference '(1 2 3 4) '(3 4 5 6)) ⇒ (6 5 2 1)
 (set-eq? '(1 2 3) '(3 2 1))                  ⇒ #t
 (set-eq? '(1 2) '(1 3))                      ⇒ #f
 ```
