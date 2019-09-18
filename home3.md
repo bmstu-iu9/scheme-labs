@@ -10,10 +10,10 @@
 
 Примеры вызова процедуры:
 
-	```
-	(derivative '(expt x 10)) ⇒ (* 10 (expt x 9))
-	(derivative '(* 2 (expt x 5))) ⇒ (* 2 (* 5 (expt x 4)))
-	```
+```Scheme
+(derivative '(expt x 10)) ⇒ (* 10 (expt x 9))
+(derivative '(* 2 (expt x 5))) ⇒ (* 2 (* 5 (expt x 4)))
+```
 
 Рекомендации:
 
