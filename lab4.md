@@ -108,7 +108,7 @@ FAILED: (not (zero? x))
 *Запрещается* использовать встроенные условные конструкции `if`, `cond`, `case`
 и перехват исключений.
 
-### 5. Докальные определения.
+### 5. Локальные определения.
 
 Реализуйте макросы `my-let` и `my-let*`, полностью
 воспроизводящие поведение встроенных макросов `let` и `let*`.
@@ -196,9 +196,9 @@ _(while cond? expr<sub>1</sub> expr<sub>2</sub> ... expr<sub>n</sub>)_,
 ```Scheme
 (let ((p 0)
       (q 0))
-  (while (&lt; p 3)
+  (while (< p 3)
          (set! q 0)
-         (while (&lt; q 3)
+         (while (< q 3)
                 (display (list p q))
                 (newline)
                 (set! q (+ q 1)))
