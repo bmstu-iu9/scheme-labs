@@ -169,8 +169,9 @@ four&sdot;five&sdot;&sdot;six&sdot;&sdot;&para;
 (define r (rectangle 10 20))
 (define t (triangle 10 20 30))
 (define c (circle 10))
-;Пусть определение алгебраического типа вводит не только конструкторы, но и предикат этого типа:
 
+; Пусть определение алгебраического типа вводит не только конструкторы, но и предикат этого типа:
+;
 (and (figure? s)
      (figure? r)
      (figure? t)
