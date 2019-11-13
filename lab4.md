@@ -258,10 +258,10 @@ until cond?)_,
   (repeat ((set! j 0)
            (repeat ((display (list i j))
                     (set! j (+ j 1)))
-                   until (= j 3))
+                   until (< j 3))
            (set! i (+ i 1))
            (newline))
-          until (= i 3)))
+          until (< i 3)))
 ```
 
 Выведет:
