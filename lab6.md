@@ -25,12 +25,12 @@
 
     (scan-frac "110/111")  ⇒ 110/111
     (scan-frac "-4/3")     ⇒ -4/3
-    (scan-frac "+5/10")    ⇒ 5/10
+    (scan-frac "+5/10")    ⇒ 1/2
     (scan-frac "5.0/10")   ⇒ #f
     (scan-frac "FF/10")    ⇒ #f
 
     (scan-many-fracs
-     "\t1/2 1/3\n\n10/8")  ⇒ (1/2 1/3 10/8)
+     "\t1/2 1/3\n\n10/8")  ⇒ (1/2 1/3 5/4)
     (scan-many-fracs
      "\t1/2 1/3\n\n2/-5")  ⇒ #f
     ```
