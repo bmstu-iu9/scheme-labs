@@ -38,7 +38,9 @@
   ⇒ (0 3 6 9 12)
 
 (my-fold-left  quotient '(16 2 2 2 2)) ⇒ 1
+(my-fold-left  quotient '(1))          ⇒ 1
 (my-fold-right expt     '(2 3 4))      ⇒ 2417851639229258349412352
+(my-fold-right expt     '(2))          ⇒ 2
 ```
 
 ## 2. Множества
@@ -96,6 +98,7 @@
 
 (string-prefix? "abc" "abcdef")  ⇒ #t
 (string-prefix? "bcd" "abcdef")  ⇒ #f
+(string-prefix? "abcdef" "abc")  ⇒ #f
 
 (string-suffix? "def" "abcdef")  ⇒ #t
 (string-suffix? "bcd" "abcdef")  ⇒ #f
@@ -104,6 +107,7 @@
 (string-infix? "abc" "abcdefgh") ⇒ #t
 (string-infix? "fgh" "abcdefgh") ⇒ #t
 (string-infix? "ijk" "abcdefgh") ⇒ #f
+(string-infix? "bcd" "abc")      ⇒ #f
 
 (string-split "x;y;z" ";")       ⇒ ("x" "y" "z")
 (string-split "x-->y-->z" "-->") ⇒ ("x" "y" "z")
@@ -138,6 +142,12 @@
 (multi-vector-set! m '(10 7 6 12) 'test)
 (multi-vector-ref m '(10 7 6 12)) ⇒ test
 
+; Индексы '(1 2 1 1) и '(2 1 1 1) — разные индексы
+(multi-vector-set! m '(1 2 1 1) 'X)
+(multi-vector-set! m '(2 1 1 1) 'Y)
+(multi-vector-ref m '(1 2 1 1)) ⇒ X
+(multi-vector-ref m '(2 1 1 1)) ⇒ Y
+
 (define m (make-multi-vector '(3 5 7) -1))
 (multi-vector-ref m '(0 0 0)) ⇒ -1
 ```
@@ -167,9 +177,11 @@
 
 * Написать функцию `flatten` без использование функции `append` (или её аналога,
   написанного вручную) — **+1 балл.**
-* Написать функцию `list-trim-right` без реверса списка (встроенной функции
+* Написать функцию `list-trim-right`, удаляющую пробельные символы на конце _списка,_
+  без реверса этого списка (встроенной функции
   `reverse` или её аналога, написанного вручную) — **+1 балл.**
-* Написать функцию `list-trim-right` без реверса списка (встроенной функции
+* Написать функцию `list-trim-right`, удаляющую пробельные символы на конце _списка,_
+  без реверса этого списка (встроенной функции
   `reverse` или её аналога, написанного вручную) и работающую со сложностью
   `O(len(xs))` — **+2 балла.**
 * При решении задачи № 5 (композиция функций) воспользоваться одной из функций,
