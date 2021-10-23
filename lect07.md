@@ -216,7 +216,14 @@
     (exact? 1.0+2i)                    → #f
 
 
+Функции преобразования типов
+----------------------------
 
+    (string->number "10.3e7")          → 103000000.0
+    (number->string 100500)            → "100500"
+    (string->list "abc")               → (#\a #\b #\c)
+    (list->vector '(1 2 3))            → #(1 2 3)
+    (string->number "qwerty")          → #f
 
 
 
