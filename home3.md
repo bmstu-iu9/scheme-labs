@@ -10,9 +10,10 @@
 
 Примеры вызова процедуры:
 
-```Scheme
+```scheme
 (derivative '(expt x 10)) ⇒ (* 10 (expt x 9))
 (derivative '(* 2 (expt x 5))) ⇒ (* 2 (* 5 (expt x 4)))
+(derivative (list '* 'x 'x)) ⇒ (+ (* x 1) (* 1 x))
 ```
 
 Рекомендации:
@@ -31,4 +32,17 @@
   на `0` или `1`, сложение с нулём — **+1 балл.**
 * Написать макрос `flatten` (т.е. функцию `flatten` из [ДЗ 2](home2.md)
   в виде макроса) — **+1 балл.**
-* Написать макрос `derivative` — **+1 балл.**
+  ```scheme
+  (flatten (((+) 1) (2 (3) ((4))))) ⇒ 10
+  ```
+  т.к.
+  ```scheme
+  (+ 1 2 3 4) ⇒ 10
+  ```
+* Написать макрос `mderivative` — **+1 балл.**
+  ```scheme
+  (define (der-cube x)
+    (mderivative (expt x 3)))
+
+  (der-cube 10) ⇒ 300
+  ```
