@@ -1,0 +1,40 @@
+digraph {
+  fontname="Courier New";
+  node [shape=rect, style=rounded, fontname="Courier New", fontsize=16];
+
+  f2 [
+    label="Встроенная функция «=»"
+  ]
+  e2 [
+    shape=none,
+    label=<
+      <table border="0" cellborder="1" cellspacing="0">
+      <tr><td>3</td><td>1</td></tr>
+      </table>
+    >
+  ];
+  f2 -> e2 [ label="среда" ];
+  { rank=same; f2, e2; }
+
+  f1 [
+    label=
+      "(if ●                                 \n" +
+      "    1                                 \n" +
+      "    (+ (fib (- n 1)) (fib (- n 2))))))\n",
+  ];
+  f2 -> f1 [label="возврат"];
+  e1 [
+    shape=none,
+    label=<
+      <table border="0" cellborder="1" cellspacing="0">
+      <tr><td>n</td></tr>
+      <tr><td>3</td></tr>
+      </table>
+    >
+  ];
+  f1 -> e1 [label="среда"];
+  { rank=same; f1, e1; }
+
+  f0 [label="(display ●)"];
+  f1 -> f0 [label="возврат"];
+}

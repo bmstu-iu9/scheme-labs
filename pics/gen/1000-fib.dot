@@ -1,0 +1,6 @@
+digraph {
+  fontname="Courier New";
+  node [shape=rect, style=rounded, fontname="Courier New", fontsize=16];
+
+  f0 [label="(display (fib 3))"];
+}

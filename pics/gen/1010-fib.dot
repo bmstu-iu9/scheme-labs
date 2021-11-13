@@ -1,0 +1,27 @@
+digraph {
+  fontname="Courier New";
+  node [shape=rect, style=rounded, fontname="Courier New", fontsize=16];
+
+  f1 [
+    label=
+      "(if (= n 0)                                \n" +
+      "    1                                      \n" +
+      "    (if (= n 1)                            \n" +
+      "        1                                  \n" +
+      "        (+ (fib (- n 1)) (fib (- n 2)))))))\n",
+  ];
+  e1 [
+    shape=none,
+    label=<
+      <table border="0" cellborder="1" cellspacing="0">
+      <tr><td>n</td></tr>
+      <tr><td>3</td></tr>
+      </table>
+    >
+  ];
+  f1 -> e1 [ label="среда" ];
+  { rank=same; f1, e1; }
+
+  f0 [label="(display ●)"];
+  f1 -> f0 [ label="возврат" ];
+}

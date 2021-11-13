@@ -1,0 +1,24 @@
+digraph {
+  fontname="Courier New";
+  node [shape=rect, style=rounded, fontname="Courier New", fontsize=16];
+
+  frame_prev [label="..."];
+  frame [label="Выражение с ●"];
+  frame_prev -> frame;
+  env [
+    shape=none,
+    label=<
+      <table border="0" cellborder="1" cellspacing="0">
+      <tr><td>x</td><td>x</td><td>y</td></tr>
+      <tr><td>10</td><td>20</td><td>30</td></tr>
+      </table>
+    >
+  ];
+  {
+    rank=same;
+    frame, env;
+  }
+  frame -> env [label="среда"];
+  frame_next [label="..."];
+  frame -> frame_next [label="возврат"];
+}
