@@ -128,35 +128,157 @@
 
     (display (fib 3))
 
+Начальное состояние:
+
 ![1010-fib.dot](pics/gen/1010-fib.png)
 
-![0000-frame.png](pics/gen/0000-frame.png)
-![1000-fib.png](pics/gen/1000-fib.png)
+Создаётся фрейм стека для `(fib 3)`:
+
 ![1010-fib.png](pics/gen/1010-fib.png)
+
+Подстановка значения вместо переменной в `if`:
+
 ![1020-fib.png](pics/gen/1020-fib.png)
+
+Аргументы для встроенной функции `=` вычислены, вызов встроенной функции.
+Имена переменных в среде не указаны, т.к. функция встроенная и мы их
+не знаем.
+
 ![1030-fib.png](pics/gen/1030-fib.png)
+
+Функция `=` вернула ложь:
+
 ![1040-fib.png](pics/gen/1040-fib.png)
+
+Редукция `if`:
+
 ![1050-fib.png](pics/gen/1050-fib.png)
+
+Подстановка значения переменной:
+
 ![1060-fib.png](pics/gen/1060-fib.png)
+
+Вызов `=`:
+
 ![1070-fib.png](pics/gen/1070-fib.png)
+
+Фрейм стека для `=`:
+
 ![1080-fib.png](pics/gen/1080-fib.png)
+
+Возврат `#f` из `=` (опущен), редукция `if`:
+
 ![1090-fib.png](pics/gen/1090-fib.png)
+
+Подстановка значения переменной:
+
 ![1095-fib.png](pics/gen/1095-fib.png)
+
+Аргументы у встроенной функции `-` вычислены, её вызов и фрейм стека:
+
 ![1100-fib.png](pics/gen/1100-fib.png)
+
+Возврат из функции `-`:
+
 ![1110-fib.png](pics/gen/1110-fib.png)
+
+Рекурсивный вызов `fib`:
+
 ![1120-fib.png](pics/gen/1120-fib.png)
+
+Очевидные вызовы `=` и шаги редукции `if` пропускаем:
+
 ![1130-fib.png](pics/gen/1130-fib.png)
+
+Вычисление `(- n 1)` → `(- 2 1)` → `1`:
+
 ![1140-fib.png](pics/gen/1140-fib.png)
+
+Рекурсивный вызов `fib`:
+
 ![1150-fib.png](pics/gen/1150-fib.png)
+
+Вычисление `(= n 0)` → `(= 1 0)` → `#f`:
+
 ![1160-fib.png](pics/gen/1160-fib.png)
+
+Редукция `if`:
+
 ![1170-fib.png](pics/gen/1170-fib.png)
+
+Вычисление `(= n 1)` → `(= 1 1)` → `#t`:
+
 ![1180-fib.png](pics/gen/1180-fib.png)
+
+Редукция `if`:
+
 ![1190-fib.png](pics/gen/1190-fib.png)
+
+Возврат вычисленного значения:
+
 ![1200-fib.png](pics/gen/1200-fib.png)
+
+Вычисление `(- n 2)` → `(- 2 2)` → `0`:
+
 ![1210-fib.png](pics/gen/1210-fib.png)
+
+Рекурсивный вызов `fib`:
+
 ![1220-fib.png](pics/gen/1220-fib.png)
+
+Вычисление `(= n 0)` → `(= 0 0)` → `#t`:
+
 ![1230-fib.png](pics/gen/1230-fib.png)
+
+Редукция `#if`, возврат из функции:
+
 ![1240-fib.png](pics/gen/1240-fib.png)
+
+Вычисление `(+ 1 1)` → `2`:
+
 ![1250-fib.png](pics/gen/1250-fib.png)
+
+Возврат из функции:
+
 ![1260-fib.png](pics/gen/1260-fib.png)
-![test.png](pics/gen/test.png)
+
+
+
+Рисунки «на доске»
+------------------
+
+![1.jpg](pics/scan/1.jpg)
+
+![2.jpg](pics/scan/2.jpg)
+
+![3.jpg](pics/scan/3.jpg)
+
+![4.jpg](pics/scan/4.jpg)
+
+![5.jpg](pics/scan/5.jpg)
+
+![6.jpg](pics/scan/6.jpg)
+
+![7.jpg](pics/scan/7.jpg)
+
+![8.jpg](pics/scan/8.jpg)
+
+![9.jpg](pics/scan/9.jpg)
+
+![10.jpg](pics/scan/10.jpg)
+
+![11.jpg](pics/scan/11.jpg)
+
+![12.jpg](pics/scan/12.jpg)
+
+![13.jpg](pics/scan/13.jpg)
+
+![14.jpg](pics/scan/14.jpg)
+
+![15.jpg](pics/scan/15.jpg)
+
+![16.jpg](pics/scan/16.jpg)
+
+![17.jpg](pics/scan/17.jpg)
+
+![18.jpg](pics/scan/18.jpg)

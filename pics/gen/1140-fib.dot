@@ -20,7 +20,7 @@ digraph {
 
   f1 [
     label=
-      "(+ (fib 2) (fib (- n 2))))))\n",
+      "(+ ● (fib (- n 2))))))\n",
   ];
   f2 -> f1 [label="возврат"];
   e1 [
