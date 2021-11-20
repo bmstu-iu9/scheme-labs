@@ -196,3 +196,41 @@ Joy, Factor.
     10 5 + .
 
 Выведет `5`, а не `15`.
+
+Слово с переменным числом параметров:
+
+    : SUM DUP WHILE + SWAP DUP WEND DROP ;
+
+Сложит все числа на стеке до ближайшего нуля.
+
+    1 2 3 0 4 5 6 SUM   =>  1 2 3 15
+    ===== ~~~~~~~           ===== ~~
+
+    1 2 3 0 4 5 6          DUP WHILE + SWAP DUP WEND DROP ;
+                           ↑
+    1 2 3 0 4 5 6 6        DUP WHILE + SWAP DUP WEND DROP ;
+                               ↑
+    1 2 3 0 4 5 6          DUP WHILE + SWAP DUP WEND DROP ;
+                                     ↑
+    1 2 3 0 4 11           DUP WHILE + SWAP DUP WEND DROP ;
+                                       ↑
+    1 2 3 0 11 4           DUP WHILE + SWAP DUP WEND DROP ;
+                                            ↑
+    1 2 3 0 11 4 4         DUP WHILE + SWAP DUP WEND DROP ;
+                                                ↑
+    1 2 3 0 11 4 4         DUP WHILE + SWAP DUP WEND DROP ;
+                               ↑
+    1 2 3 0 11 4           DUP WHILE + SWAP DUP WEND DROP ;
+                                     ↑
+    1 2 3 0 15             DUP WHILE + SWAP DUP WEND DROP ;
+                                       ↑
+    1 2 3 15 0             DUP WHILE + SWAP DUP WEND DROP ;
+                                            ↑
+    1 2 3 15 0 0           DUP WHILE + SWAP DUP WEND DROP ;
+                                                ↑
+    1 2 3 15 0 0           DUP WHILE + SWAP DUP WEND DROP ;
+                               ↑
+    1 2 3 15 0             DUP WHILE + SWAP DUP WEND DROP ;
+                                                     ↑
+    1 2 3 15               DUP WHILE + SWAP DUP WEND DROP ;
+                                                          ↑
