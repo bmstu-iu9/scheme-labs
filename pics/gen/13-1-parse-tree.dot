@@ -1,0 +1,49 @@
+digraph {
+  E1 -> E2;
+  E1 -> p1;
+  E1 -> T1;
+
+  T1 -> T2;
+  T1 -> m1;
+  T1 -> F1;
+
+  E2 -> T3;
+
+  T3 -> F2;
+
+  F2 -> n1;
+
+  F1 -> bl1;
+  F1 -> E3;
+  F1 -> br1;
+
+  T2 -> F3;
+
+  F3 -> n2;
+
+  E3 -> E4;
+  E3 -> p2;
+  E3 -> T4;
+
+  E4 -> T5;
+  T5 -> F4;
+  F4 -> n3;
+
+  T4 -> F5;
+  
+  F5 -> n4;
+
+  {
+    rank=same;
+    n1, p1, n2, m1, bl1, n3, p2, n4, br1 [shape=circle];
+  }
+
+  E1, E2, E3, E4 [label="E"];
+  T1, T2, T3, T4, T5 [label="T"];
+  F1, F2, F3, F4, F5 [label="F"];
+  p1, p2 [label="+"];
+  n1, n2, n3, n4 [label="n"];
+  m1 [label="*"];
+  bl1 [label="("];
+  br1 [label=")"];
+}

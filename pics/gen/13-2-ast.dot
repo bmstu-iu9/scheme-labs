@@ -1,0 +1,17 @@
+digraph {
+
+  p1 -> n1;
+  p1 -> m1;
+  m1 -> n2;
+  m1 -> p2;
+  p2 -> n3;
+  p2 -> n4;
+
+  {
+    n1, p1, n2, m1, n3, p2, n4 [shape=circle];
+  }
+
+  p1, p2 [label="+"];
+  n1, n2, n3, n4 [label="n"];
+  m1 [label="*"];
+}
