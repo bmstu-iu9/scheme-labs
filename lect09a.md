@@ -25,8 +25,8 @@
 
 Создание порта:
 
-    (open-input-port "имя файла")      → port
-    (open-output-port "имя файла")     → port
+    (open-input-file "имя файла")      → port
+    (open-output-file "имя файла")     → port
 
 Предусловие для `open-output-port`: файл существовать не должен (иначе ошибка).
 
