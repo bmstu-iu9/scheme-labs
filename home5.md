@@ -219,7 +219,7 @@
                rot                               ; n  λ  x
                over                              ; n  λ  x  λ
                apply                             ; n  λ  x′
-               over                              ; x′ λ  n
+               rot                               ; x′ λ  n
                1 -                               ; x′ λ  n−1
                power                             ; рекурсивный вызов
              end
@@ -272,13 +272,13 @@
 
 ```scheme
 (interpret #(defvar counter 0
-             define next
+             define nextnum
                counter dup 1 + set counter
              end
-             counter counter
-             counter counter +
-             counter counter *)
-           '())                                  → (42 5 1 0)
+             nextnum nextnum
+             nextnum nextnum +
+             nextnum nextnum *)
+           '())                                  → (20 5 1 0)
 ```
 
 [БН]: https://archive.org/details/Baranov.Forth.language.and.its.implementation/mode/2up
