@@ -239,7 +239,7 @@ _letrec_, которая аналогична _let_ и _let*_, но допус
 #### Г. Цикл _repeat..until_
 
 Реализуйте макрос _repeat..until_, который позволит организовывать циклы
-с предусловием:
+с постусловием:
 
 _(repeat (expr<sub>1</sub> expr<sub>2</sub> ... expr<sub>n</sub>)
 until cond?)_,
