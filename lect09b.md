@@ -180,6 +180,6 @@ test xs = head (map (\x -> x*x) xs)
   (if (car promise)
       (caar promise)
       (begin
-        (set-car! (list ((cadr promise))))
+        (set-car! (list ((cadr promise)))) ;; Разве процедура (set-car! ...) не должна принимать два аргумента?
         (caar promise))))
 ```
