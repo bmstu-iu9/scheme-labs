@@ -180,6 +180,6 @@ test xs = head (map (\x -> x*x) xs)
   (if (car promise)
       (caar promise)
       (begin
-        (set-car! (list ((cadr promise))))
+        (set-car! promise (list ((cadr promise))))
         (caar promise))))
 ```
