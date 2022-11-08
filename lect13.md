@@ -391,6 +391,7 @@ LL(1)-грамматики
 ; <lambda> ::= (LAMBDA <varlist> <sequence>)
 ; <call> ::= (<expr> <exprs>)
 ; <exprs> ::= <empty> | <expr> <exprs>
+; <varlist> ::= ???
 ;
 ; Лексика:
 ; <tokens> ::= <token> <tokens>
@@ -409,10 +410,11 @@ LL(1)-грамматики
 ; <term> ::= <define> | <expr>
 ; <define> ::= (DEFINE VAR <expr>)
 ; <expr> ::= VAR | (<complex-const>)
-; <complex-constr> ::= <lambda> | <call>
+; <complex-const> ::= <lambda> | <call>
 ; <lambda> ::= LAMBDA <varlist> <sequence>
 ; <call> ::= <expr> <exprs>
 ; <exprs> ::= <empty> | <expr> <exprs>
+; <varlist> ::= ???
 ;
 ; Лексика:
 ; <tokens> ::= <token> <tokens>
